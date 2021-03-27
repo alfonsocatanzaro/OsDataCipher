@@ -8,8 +8,8 @@ namespace OsDataCipher
 {
     public class OsDataCipher : IOsDataCipher
     {
-        private byte[] key;
-        private byte[] iv = new byte[] {
+        private readonly byte[] key;
+        private readonly byte[] iv = new byte[] {
             32, 182, 48, 165, 169, 9, 156, 188,
             74, 177, 236, 211, 100, 41, 81, 7
         };
