@@ -67,7 +67,7 @@ Try to decrypt a string
 
 ##### Returns
 
-True for decrypt successful
+True for decrypt successfull
 
 ##### Parameters
 
@@ -106,7 +106,7 @@ Create a [OsDataCipher](#T-OsDataCipher-OsDataCipher 'OsDataCipher.OsDataCipher'
 
 ##### Summary
 
-Decrypt a crypted string
+Decrypt a encrypted string
 
 ##### Returns
 
@@ -144,7 +144,7 @@ Try to decrypt a string
 
 ##### Returns
 
-True for decrypt successfull
+True for decrypt successful
 
 ##### Parameters
 

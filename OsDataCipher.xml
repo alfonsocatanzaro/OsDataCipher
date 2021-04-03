@@ -34,7 +34,7 @@
         <member name="T:OsDataCipher.OsDataCipher">
             <summary>
             OsDataCipher provide basic and optimized functionality
-            for encrypt and decrypt string using a custom-lenght passphrase
+            for encrypt and decrypt string using a custom-length pass-phrase
             
             </summary>
         </member>
@@ -53,7 +53,7 @@
         </member>
         <member name="M:OsDataCipher.OsDataCipher.Decrypt(System.String)">
             <summary>
-            Decrypt a crypted string
+            Decrypt a encrypted string
             </summary>
             <param name="data">Base64 string to decrypt</param>
             <returns>Decrypted string</returns>
@@ -64,7 +64,7 @@
             </summary>
             <param name="encrypted">Base64 encrypted string to try for decrypt</param>
             <param name="decrypted">Decrypted strings</param>
-            <returns>True for decrypt successfull</returns>
+            <returns>True for decrypt successful</returns>
         </member>
     </members>
 </doc>

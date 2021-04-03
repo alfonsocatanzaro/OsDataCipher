@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -8,19 +9,13 @@ namespace OsDataCipher
 {
     /// <summary>
     /// OsDataCipher provide basic and optimized functionality
-    /// for encrypt and decrypt string using a custom-lenght passphrase
+    /// for encrypt and decrypt string using a custom-length pass-phrase
     /// 
     /// </summary>
     public class OsDataCipher : IOsDataCipher
     {
         private readonly byte[] key;
-
-        //TODO: Create IV from key... 
-        private readonly byte[] iv = new byte[] {
-            32, 182, 48, 165, 169, 9, 156, 188,
-            74, 177, 236, 211, 100, 41, 81, 7
-        };
-
+        private readonly byte[] iv;
 
         /// <summary>
         /// Create a <see cref="OsDataCipher"/> class instance
@@ -30,8 +25,10 @@ namespace OsDataCipher
         {
             //Convert password string to byte array
             byte[] passPhraseAsByteArray = Encoding.UTF8.GetBytes(password);
-            // create hash (16 bit) of the byte array and using it for AES algoritm
+            // create a 32 bit hash of the byte array and using it for AES algorithm
             key = SHA256.Create().ComputeHash(passPhraseAsByteArray);
+            // create a 16 bit hash to use for initialization vector
+            iv = MD5.Create().ComputeHash(passPhraseAsByteArray);
         }
 
         /// <summary>
@@ -46,7 +43,7 @@ namespace OsDataCipher
         }
 
         /// <summary>
-        /// Decrypt a crypted string
+        /// Decrypt a encrypted string
         /// </summary>
         /// <param name="data">Base64 string to decrypt</param>
         /// <returns>Decrypted string</returns>
@@ -62,7 +59,7 @@ namespace OsDataCipher
         /// </summary>
         /// <param name="encrypted">Base64 encrypted string to try for decrypt</param>
         /// <param name="decrypted">Decrypted strings</param>
-        /// <returns>True for decrypt successfull</returns>
+        /// <returns>True for decrypt successful</returns>
         public bool TryDecrypt(string encrypted, out string decrypted)
         {
             try
