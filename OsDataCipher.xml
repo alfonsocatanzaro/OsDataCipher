@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OsDataCipher</name>
+    </assembly>
+    <members>
+        <member name="T:OsDataCipher.IOsDataCipher">
+            <summary>
+            IOsDataCippher inteface
+            </summary>
+        </member>
+        <member name="M:OsDataCipher.IOsDataCipher.Encrypt(System.String)">
+            <summary>
+            Encrypt a string
+            </summary>
+            <param name="data">String to encrypt</param>
+            <returns>Encrypted string</returns>
+        </member>
+        <member name="M:OsDataCipher.IOsDataCipher.Decrypt(System.String)">
+            <summary>
+            Decrypt a crypted string
+            </summary>
+            <param name="data">String to decrypt</param>
+            <returns>Decrypted string</returns>
+        </member>
+        <member name="M:OsDataCipher.IOsDataCipher.TryDecrypt(System.String,System.String@)">
+            <summary>
+            Try to decrypt a string
+            </summary>
+            <param name="encrypted">Encrypted string to try for decrypt</param>
+            <param name="decrypted">Decrypted strings</param>
+            <returns>True for decrypt successfull</returns>
+        </member>
+        <member name="T:OsDataCipher.OsDataCipher">
+            <summary>
+            OsDataCipher provide basic and optimized functionality
+            for encrypt and decrypt string using a custom-lenght passphrase
+            
+            </summary>
+        </member>
+        <member name="M:OsDataCipher.OsDataCipher.#ctor(System.String)">
+            <summary>
+            Create a <see cref="T:OsDataCipher.OsDataCipher"/> class instance
+            </summary>
+            <param name="password">A password to use for encrypt and decrypt operations</param>
+        </member>
+        <member name="M:OsDataCipher.OsDataCipher.Encrypt(System.String)">
+            <summary>
+            Encrypt a string
+            </summary>
+            <param name="data">String to encrypt</param>
+            <returns>Base64 encrypted string</returns>
+        </member>
+        <member name="M:OsDataCipher.OsDataCipher.Decrypt(System.String)">
+            <summary>
+            Decrypt a crypted string
+            </summary>
+            <param name="data">Base64 string to decrypt</param>
+            <returns>Decrypted string</returns>
+        </member>
+        <member name="M:OsDataCipher.OsDataCipher.TryDecrypt(System.String,System.String@)">
+            <summary>
+            Try to decrypt a string
+            </summary>
+            <param name="encrypted">Base64 encrypted string to try for decrypt</param>
+            <param name="decrypted">Decrypted strings</param>
+            <returns>True for decrypt successfull</returns>
+        </member>
+    </members>
+</doc>

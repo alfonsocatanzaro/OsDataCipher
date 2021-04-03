@@ -9,6 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OsDataCipher.Test", "OsData
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OsDataCipher", "OsDataCrypter\OsDataCipher.csproj", "{3E7B177F-DD4E-4925-9F1B-3AC04BC7B5EB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B63C7EA-4827-429A-B204-B0E3259F6F39}"
+	ProjectSection(SolutionItems) = preProject
+		OsDataCipher.md = OsDataCipher.md
+		OsDataCipher.xml = OsDataCipher.xml
+		readme.md = readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

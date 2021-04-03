@@ -9,10 +9,10 @@ namespace OsDataCipher.Test
         [Theory]
         [InlineData("A", "password")]
         [InlineData("A", "a")]
-        [InlineData("data to cript", "password")]
-        [InlineData("data to cript", "")]
+        [InlineData("data to crypt", "password")]
+        [InlineData("data to crypt", "")]
         [InlineData("", "")]
-        [InlineData("", "passw$ord")]
+        [InlineData("", "password")]
         public void Encrypt_And_Decrypt_Should_Obtain_Same_String(string str, string password)
         {
             IOsDataCipher osDataCipher = new OsDataCipher(password);
@@ -30,7 +30,7 @@ namespace OsDataCipher.Test
         public void Encrypt_And_Decrypt_With_Different_Instance_Should_Obtain_Same_String()
         {
             string str = "data to encrypt";
-            string password = "secretpassword";
+            string password = "secret_password";
             IOsDataCipher osDataCipher = new OsDataCipher(password);
             IOsDataCipher osDataCipher2 = new OsDataCipher(password);
 
